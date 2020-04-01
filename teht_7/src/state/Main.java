@@ -1,3 +1,5 @@
+package state;
+
 import java.util.Scanner;
 
 public class Main {

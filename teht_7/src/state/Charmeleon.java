@@ -1,3 +1,5 @@
+package state;
+
 public class Charmeleon implements PokemonState {
     private static final String name = "Charmeleon";
     private static final int ATK = 10;

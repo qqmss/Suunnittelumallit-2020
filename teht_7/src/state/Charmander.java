@@ -1,6 +1,9 @@
-public class Charizard implements PokemonState {
-    private static final String name = "Charizard";
-    private static final int ATK = 33;
+package state;
+
+public class Charmander implements PokemonState {
+    private static final String name = "Charmander";
+    private static final int ATK = 22;
+    private static final int EVOLVE_EXP = 5;
     private int currentEXP = 0;
 
     @Override
@@ -18,7 +21,11 @@ public class Charizard implements PokemonState {
 
     @Override
     public void doTryEvolve(PokemonContext context) {
-        System.out.println("EXP: " + currentEXP);
+        System.out.println("EXP: " + currentEXP + "/" + EVOLVE_EXP);
+        if (currentEXP >= EVOLVE_EXP) {
+            System.out.println(name  + " evolves");
+            context.setState(new Charizard());
+        }
     }
 
     @Override
