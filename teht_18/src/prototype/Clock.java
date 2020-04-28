@@ -48,6 +48,6 @@ public class Clock implements Cloneable{
         clock.setHour((Hour) hour.clone());
         clock.setMinute((Minute) minute.clone());
         clock.second = (Second) second.clone();
-        return super.clone();
+        return clock;
     }
 }

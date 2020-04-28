@@ -8,6 +8,7 @@ public class Main {
         Clock clockClone = null;
         try {
             clockClone = (Clock) clock.clone();
+            clockClone.getMinute().setM(12);
             clockClone.setSecond(new Second(44));
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
